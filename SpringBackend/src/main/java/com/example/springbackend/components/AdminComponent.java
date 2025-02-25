@@ -16,7 +16,7 @@ public class AdminComponent {
     /**
      * Method to create a list of AdminDocument objects
      *
-     * @return
+     * @return List<AdminDocument>
      */
     public List<AdminDocument> getAdminDocuments(){
         ArrayList<AdminDocument> list  = new ArrayList<>();

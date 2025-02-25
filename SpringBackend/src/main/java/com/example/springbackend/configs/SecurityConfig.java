@@ -34,10 +34,11 @@ public class SecurityConfig {
     @Bean
     protected SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/register").permitAll()
-                        .requestMatchers("/admin").hasAnyRole("ADMIN","MANAGER")
-                        .requestMatchers("/manager").hasRole("MANAGER")
-                        .anyRequest().authenticated());
+
+                        .requestMatchers("/register").permitAll() // allow all to /register
+                        .requestMatchers("/admin").hasAnyRole("ADMIN","MANAGER") // allow admin and manager to /adin
+                        .requestMatchers("/manager").hasRole("MANAGER") // allow manager to /manager
+                        .anyRequest().authenticated()); // allow any other endpoint to anyone who is authenticated
 
 
                 httpSecurity.userDetailsService(myUserDetailsService); // use Custom detailsService

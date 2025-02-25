@@ -14,7 +14,7 @@ public class ManagerComponent {
 
     /**
      * Method to create a list of ManagerInfo objects
-     * @return
+     * @return List<ManagerInfo>
      */
     public List<ManagerInfo> getManagerInfo(){
         ArrayList<ManagerInfo> list  = new ArrayList<>();
