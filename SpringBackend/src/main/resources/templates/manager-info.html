@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manager page</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr><th>Title</th><th>InfoText</th></tr>
+    </thead>
+    <tbody>
+    <tr th:each="inf : ${info}">
+        <td th:text="${inf.title}"></td>
+        <td th:text="${inf.infoText}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
